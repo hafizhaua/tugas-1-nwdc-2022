@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --gradText: linear-gradient(45deg, rgba(7, 147, 177, 1) 0%, rgba(37, 65, 121, 1) 100%);
+  --gradDecor: linear-gradient(45deg, rgba(116, 203, 187, 1) 0%, rgba(53, 106, 118, 1) 100%);
+  --gradPortoBg: linear-gradient(135deg, rgba(40, 51, 56, 1) 0%, rgba(44, 44, 47, 1) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 85%;
+  max-width: 1000px;
+  margin: 1rem auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* ****** */
+/* Header */
+/* ****** */
+header {
+  z-index: 2;
+  width: 100vw;
+  position: fixed;
+  background: transparent;
+}
+
+header .container {
+  height: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header h3 {
+  float: left;
+  background: var(--gradText);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25rem;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  margin-right: 1rem;
+  display: inline;
+  list-style-type: none;
+  line-height: 2rem;
+}
+
+header h3 a {
+  text-decoration: none;
+}
+
+nav a {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: rgba(7, 147, 177, 1);
+}
+
+.navbar-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav ul {
+    display: none;
+  }
+
+  nav .navbar-icon {
+    display: block;
+    float: right;
+  }
+
+  .nav-responsive ul {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    background: white;
+    top: 50px;
+    left: 0;
+    animation-name: navbar-animation;
+    animation-duration: 0.3s;
+    z-index: 1;
+    display: block;
+    float: none;
+    border-radius: 15px;
+    padding: 5px;
+    filter: drop-shadow(-10px -20px 62px rgba(0, 0, 0, 0.05));
+  }
+
+  .nav-responsive li {
+    margin: 0;
+    display: block;
+  }
+
+  @keyframes navbar-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* ************ */
+/* Home Section */
+/* ************ */
+
+#home {
+  background: url(assets/Home/BgOrnament.svg);
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#home .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#home .container img {
+  width: 250px;
+}
+
+#home .text-container h1 {
+  font-size: 6rem;
+  background: var(--gradText);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#home .text-container h3 {
+  font-size: 1.5rem;
+  color: #282828;
+}
+
+#home .text-container .button-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#home .button-container button {
+  display: flex;
+  background: rgb(90, 179, 162);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home .button-container button:hover {
+  background: rgb(53, 106, 118);
+}
+#home .button-container button img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 1050px) {
+  #home .button-container button {
+    margin: 10px;
+  }
+}
+
+#left-rock {
+  align-self: flex-end;
+}
+
+#right-rock {
+  align-self: flex-start;
+}
+
+/* ****** */
+/* Footer */
+/* ****** */
+
+footer {
+  color: white;
+  text-align: center;
+  background: var(--gradPortoBg);
+  padding: 8px;
+}
+
+footer h1 {
+  font-size: 1rem;
+}
