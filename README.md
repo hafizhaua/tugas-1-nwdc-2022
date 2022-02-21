@@ -1,4 +1,4 @@
-# NWDC 2022 Assignment
+# Assignment 1 - NWDC 2022 
 
 This is a personal website made for the first assignment of NWDC 2022. 
 It is a simple landing page website that only contains hero section. 
